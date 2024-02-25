@@ -21,5 +21,20 @@ export class TaskService {
     const path = `${this.api}/todos/${id}`;
     return this.http.get<Task>(path);
   }
+
+  createTask(task: Task) {
+    const path = `${this.api}/todos`;
+    return this.http.post(path, task);
+  }
+
+  updateTask(task: Task) {
+    const path = `${this.api}/todos/${task.id}`;
+    return this.http.put<Task>(path, task);
+  }
+
+  deleteTask(id: string) {
+    const path = `${this.api}/todos/${id}`;
+    return this.http.delete(path);
+  }
 }
 

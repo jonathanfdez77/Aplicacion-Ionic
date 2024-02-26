@@ -13,28 +13,40 @@
       <ion-title>
         Tareas
       </ion-title>
-      <ion-buttons slot="end">
+        <ion-buttons slot="end">
+          <!-- <ion-button (click)="openAlert()">
+        </ion-button> -->
         <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-      </ion-buttons>
+        </ion-buttons>
     </ion-toolbar>
   </ion-header>
   
   <ion-content [fullscreen]="true">
     <ion-list>
-      <!-- <ion-item *ngFor = "let task of tasks">
-        <ion-label>{{task.title}}</ion-label>
-        <ion-checkbox [checked] = "task.completed" slot="start"></ion-checkbox>
-      </ion-item> -->
+      <!-- <ion-item-sliding *ngFor = "let task of tasks; let index = i">
+        <ion-item>
+          <ion-label>{{task.title}}</ion-label>
+          <ion-checkbox [checked] = "task.completed" slot="start"></ion-checkbox>
+        <ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="danger"
+            <ion-icon name="trash"></ion-icon>
+          </ion-item-option>
+          <ion-item-option color="secondary"
+            <ion-icon name="add"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        </ion-item-sliding> -->
       <ion-item>
-        <ion-label>Tarea 1</ion-label>
+        <ion-label>Laboratorio de comunicaciones</ion-label>
         <ion-checkbox color="secondary"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Tarea 2</ion-label>
+        <ion-label>Evaluaciones CISCO</ion-label>
         <ion-checkbox color="secondary"></ion-checkbox>
       </ion-item>
       <ion-item>
-        <ion-label>Tarea 3</ion-label>
+        <ion-label>Estudiar</ion-label>
         <ion-checkbox color="secondary"></ion-checkbox>
       </ion-item>
     </ion-list>
